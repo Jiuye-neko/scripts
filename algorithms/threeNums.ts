@@ -1,4 +1,4 @@
-function threeSum(nums: number[]): number[][] {
+export function threeSum(nums: number[]): number[][] {
   nums = nums.sort((a, b) => a - b);
 
   let ans: number[][] = [];
@@ -35,5 +35,3 @@ function threeSum(nums: number[]): number[][] {
 
   return ans;
 }
-
-threeSum([1, -1, -1, 0]);
