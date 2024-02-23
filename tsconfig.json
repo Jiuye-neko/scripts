@@ -3,12 +3,16 @@
     "target": "ESNext",
     "module": "NodeNext",
     "moduleResolution": "NodeNext",
+    "lib": ["ESNext", "DOM"],
+    "skipLibCheck": true,
     "allowImportingTsExtensions": true,
+    "noEmit": true,
     "outDir": "out",
     "sourceMap": true,
     "forceConsistentCasingInFileNames": true,
     "strict": true,
     "strictNullChecks": true
   },
+  "include": ["algorithms"],
   "exclude": ["node_modules"]
 }
