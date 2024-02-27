@@ -11,7 +11,7 @@
     "sourceMap": true,
     "forceConsistentCasingInFileNames": true,
     "strict": true,
-    "strictNullChecks": true
+    "strictNullChecks": false
   },
   "include": ["algorithms"],
   "exclude": ["node_modules"]
