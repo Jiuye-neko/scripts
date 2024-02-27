@@ -10,6 +10,7 @@ export function search(nums: number[], target: number): number {
       return target > nums[mid] || target <= end;
     }
   };
+
   while (left < right) {
     let mid = left + Math.floor((right - left) / 2);
     if (isRight(mid)) {

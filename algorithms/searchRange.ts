@@ -3,7 +3,9 @@ export function searchRange(nums: number[], target: number): number[] {
   if (start === nums.length || nums[start] !== target) {
     return [-1, -1];
   }
+
   let end = lower(nums, target + 1) - 1;
+
   return [start, end];
 }
 
@@ -19,5 +21,6 @@ function lower(nums: number[], target: number) {
       right = mid;
     }
   }
+
   return left;
 }

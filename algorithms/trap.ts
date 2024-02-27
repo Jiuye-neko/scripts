@@ -1,12 +1,12 @@
 export function trap(height: number[]): number {
+  let ans = 0;
   let left = 0;
   let right = height.length - 1;
-
-  let ans = 0;
   let prev: number[] = [];
   let alter: number[] = [];
   let prevMax = 0;
   let alterMax = 0;
+
   for (let i = 0; i < height.length; i++) {
     prevMax = Math.max(prevMax, height[left]);
     prev.push(prevMax);

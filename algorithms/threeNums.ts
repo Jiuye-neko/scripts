@@ -6,9 +6,11 @@ export function threeSum(nums: number[]): number[][] {
 
   for (let i = 0; i < len - 2; i++) {
     let x = nums[i];
+
     if (i > 0 && x === nums[i - 1]) {
       continue;
     }
+
     let j = i + 1;
     let k = len - 1;
     while (j < k) {

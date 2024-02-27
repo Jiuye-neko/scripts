@@ -2,6 +2,7 @@ export function findPeakElement(nums: number[]): number {
   if (nums.length === 1) {
     return 0;
   }
+
   let left = 0;
   let right = nums.length;
   while (left < right) {
@@ -12,5 +13,6 @@ export function findPeakElement(nums: number[]): number {
       right = mid;
     }
   }
+
   return left;
 }

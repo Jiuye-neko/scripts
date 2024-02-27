@@ -16,8 +16,10 @@ export const createNodeList = (nums: number[]): ListNode | null => {
   if (nums.length < 1) {
     return null;
   }
+
   let head = new ListNode(nums[0]);
   let cur = head;
+
   for (let i = 1; i < nums.length; i++) {
     let next = new ListNode(nums[i]);
     cur.next = next;
@@ -36,19 +38,28 @@ export const validList = (expected: number[]) => {
   return (reHead: ListNode | null) => {
     let receive: number[] = [];
     let cur = reHead;
+
     while (cur) {
       receive.push(cur.val);
       cur = cur.next;
     }
+
+    console.log(expected);
+
     if (expected.length !== receive.length) {
+      console.log(`长度不相等, receive: ${receive}, expected: ${expected}`);
       return false;
     }
+
     let isEqual = true;
+
     for (let i = 0; i < expected.length; i++) {
       if (expected[i] !== receive[i]) {
+        console.log(`下标${i}不相等, receive: ${receive[i]}, expected: ${expected[i]}`);
         isEqual = false;
       }
     }
+
     return isEqual;
   };
 };

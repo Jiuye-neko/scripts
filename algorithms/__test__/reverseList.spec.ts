@@ -7,10 +7,12 @@ describe('反转链表', () => {
     let head = createNodeList([1, 2, 3, 4, 5]);
     expect(reverseList(head)).toSatisfy(validList([5, 4, 3, 2, 1]));
   });
+
   it('[1, 2]', () => {
     let head = createNodeList([1, 2]);
     expect(reverseList(head)).toSatisfy(validList([2, 1]));
   });
+
   it('[]', () => {
     let head = createNodeList([]);
     expect(reverseList(head)).toSatisfy(validList([]));
